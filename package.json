@@ -1,0 +1,51 @@
+{
+  "name": "@blumjs/utils",
+  "version": "1.0.0",
+  "description": "",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "type": "module",
+  "typings": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc && vite build",
+    "build:watch": "tsc && vite build --watch",
+    "dev": "vite",
+    "deploy": "npm run build && npm publish"
+  },
+  "author": "XtereO",
+  "keywords": [
+    "hooks",
+    "react",
+    "blum",
+    "blumjs",
+    "Blue-Meteor",
+    "vk-mini-apps",
+    "timeout",
+    "interval",
+    "debouncing",
+    "event-listener"
+  ],
+  "license": "ISC",
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^11.1.0",
+    "@types/node": "^18.15.11",
+    "@types/react": "^18.0.33",
+    "@types/react-dom": "^18.0.11",
+    "@vitejs/plugin-react": "^3.1.0",
+    "rollup-plugin-typescript-paths": "^1.4.0",
+    "tslib": "^2.5.0",
+    "typescript": "^5.0.3",
+    "vite": "^4.2.1"
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
