@@ -1,6 +1,6 @@
 {
   "name": "@blumjs/utils",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "exports": {
     ".": "./dist/index.js"
@@ -18,16 +18,14 @@
   },
   "author": "XtereO",
   "keywords": [
-    "hooks",
+    "utils",
     "react",
     "blum",
     "blumjs",
     "Blue-Meteor",
     "vk-mini-apps",
-    "timeout",
-    "interval",
-    "debouncing",
-    "event-listener"
+    "base64",
+    "link"
   ],
   "license": "ISC",
   "devDependencies": {
