@@ -33,17 +33,10 @@
   "devDependencies": {
     "@rollup/plugin-typescript": "^11.1.0",
     "@types/node": "^18.15.11",
-    "@types/react": "^18.0.33",
-    "@types/react-dom": "^18.0.11",
-    "@vitejs/plugin-react": "^3.1.0",
     "rollup-plugin-typescript-paths": "^1.4.0",
     "tslib": "^2.5.0",
     "typescript": "^5.0.3",
     "vite": "^4.2.1"
-  },
-  "peerDependencies": {
-    "react": ">=18.0.0",
-    "react-dom": ">=18.0.0"
   },
   "publishConfig": {
     "access": "public"

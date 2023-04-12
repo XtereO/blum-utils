@@ -1,7 +1,6 @@
 import { defineConfig } from "vite";
 
 import typescript from "@rollup/plugin-typescript";
-import react from "@vitejs/plugin-react";
 import { resolve } from "path";
 import { typescriptPaths } from "rollup-plugin-typescript-paths";
 
@@ -11,7 +10,6 @@ export default defineConfig({
       src: "/src",
     },
   },
-  plugins: [react()],
   build: {
     manifest: true,
     minify: true,
@@ -22,7 +20,6 @@ export default defineConfig({
       formats: ["es", "cjs"],
     },
     rollupOptions: {
-      external: ["react", "react-dom"],
       plugins: [
         typescriptPaths({
           preserveExtensions: true,
