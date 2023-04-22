@@ -1,7 +1,7 @@
 {
   "name": "@blumjs/utils",
-  "version": "1.0.1",
-  "description": "",
+  "version": "1.0.2",
+  "description": "Bunch of useful utils",
   "exports": {
     ".": "./dist/index.js"
   },
@@ -24,6 +24,7 @@
     "blumjs",
     "Blue-Meteor",
     "vk-mini-apps",
+    "vk-mini-app",
     "base64",
     "link"
   ],

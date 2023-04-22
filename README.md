@@ -4,7 +4,7 @@
 
 # Description
 
-This library contain base utils. Created for fast developing vk-mini-apps. I recomend use it with @blumjs/cli.
+This library contain base utils. Created for fast developing vk-mini-apps. I recomend use it with [@blumjs/cli](https://www.npmjs.com/package/@blumjs/utils).
 
 ## Usage
 
