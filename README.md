@@ -1,15 +1,15 @@
 <div align="center">
-    <img width="134" src="https://webstockreview.net/images/comet-clipart-meteorite-4.png">
+    <img src="https://drive.google.com/uc?export=view&id=14_MxI0TSoz8wK9e-f8BHzworUfehaZz3"/>
 </div>
 
-# Description
+# Описание
 
-This library contain base utils. Created for fast developing vk-mini-apps. I recomend use it with [@blumjs/cli](https://www.npmjs.com/package/@blumjs/utils).
+Библиотека содержит утилиты. Сделано для быстрой разработки vk-mini-apps. Рекомендуется использовать с [@blumjs/cli](https://www.npmjs.com/package/@blumjs/utils).
 
-## Usage
+## Использование
 
 ```
-import { useCallback, useEffect } from 'react';
+import { useCallback, useEffect, memo } from 'react';
 import {
   clickLink,
   createDeclinationWord,
@@ -17,14 +17,14 @@ import {
   getSearchParams,
 } from '@blumjs/utils';
 
-const UserAvatarComponent = ({id, name, photo, countLikes}) => {
+const UserAvatarComponent = memo(({id, name, photo, countLikes}) => {
   const handleClick = useCallback(() => {
-    // simulate browser click, very usefull instead of just wrap <a></a> (there's will problems with style)
-    // first arg is url, second one is target(like prop in component <a target=''></a>, default value is '_blank')
+    // симуляция клика, иногда полезнее использовать чем <a></a> (могут быть пробелмы со стилем)
+    // первый аргумент url, второй target(как prop в элементе <a target=''></a>, по умолчанию: '_blank')
     clickLink(`https://vk.com/id${id}`);
   }, [id]);
 
-  // create function for declination word
+  // Создает функцию для склонения слова
   const declOfLikes = createDeclinationWord(['лайк', 'лайка', 'лайков']);
 
   console.log(declOfLikes(1));
@@ -38,13 +38,13 @@ const UserAvatarComponent = ({id, name, photo, countLikes}) => {
 
   const createStory = useCallback(() => {
     createImgBase64(
-      // load images
+      // картинка и путь к ней
       [{src: 'img src or url', x: 0, y: 0, width: 1080, height: 1920}],
 
-      // set dimenstions of canvas
+      // размерности канваса
       {width: 1080, height: 1920},
 
-      // what will happen, when img load successfull
+      // что произойдет, когда канвас полностью отрисуется
       (data) => {
         if (data.isSuccess) {
           console.log('your base64 is ready!', data.result);
@@ -56,7 +56,7 @@ const UserAvatarComponent = ({id, name, photo, countLikes}) => {
   }, []);
 
   useEffect(() => {
-    // get query params
+    // получение query params
     const searchParams = getSearchParams();
     console.log('is page of user', searchParams.get('vk_id') === id);
   }, [id]);
@@ -69,5 +69,5 @@ const UserAvatarComponent = ({id, name, photo, countLikes}) => {
       user's likes: {declOfLikes(countLikes)}
     </div>
   </>
-};
+});
 ```
