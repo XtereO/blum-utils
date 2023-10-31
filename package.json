@@ -1,6 +1,6 @@
 {
   "name": "@blumjs/utils",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Пачка полезных утилит",
   "exports": {
     ".": "./dist/index.js"
